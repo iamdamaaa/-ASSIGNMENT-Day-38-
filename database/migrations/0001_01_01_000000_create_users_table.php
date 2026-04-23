@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('password_hash');
+            $table->string('password');
             $table->enum('role', ['admin', 'seller', 'buyer'])->default('buyer');
             $table->timestamps();
             $table->boolean('is_active')->default(true);
